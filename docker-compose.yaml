@@ -2,7 +2,7 @@ version: '3'
 
 services:
   softether:
-    image: softethervpn:latest
+    image: paxvpn/softethervpn:latest
     cap_add:
       - SETGID
       - SETUID

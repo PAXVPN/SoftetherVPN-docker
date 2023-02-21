@@ -2,10 +2,16 @@ version: '3'
 
 services:
   softether:
-    image: softethervpn/vpnserver:stable
+    image: softethevpn:latest
     cap_add:
+      - SETGID
+      - SETUID
       - NET_ADMIN
+      - NET_RAW
+      - NET_BIND_SERVICE
     restart: always
+    devices:
+      - /dev/net/tun
     ports:
       - 53:53
       - 444:443

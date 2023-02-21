@@ -12,7 +12,7 @@ RUN mkdir /usr/local/src && apk add binutils --no-cache\
 
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so
 WORKDIR /usr/local/src
-RUN git clone https://github.com/SoftEtherVPN/SoftEtherVPN.git
+RUN git clone https://github.com/PAXVPN/SoftEtherVPN.git
 #RUN git clone -b ${GIT_TAG} https://github.com/SoftEtherVPN/SoftEtherVPN.git
 ENV USE_MUSL=YES
 RUN cd SoftEtherVPN &&\
